@@ -8,6 +8,8 @@ export default React.forwardRef(({ settings, viewportRef }, canvasRef) => {
   const config = {
     textLines: (settings.textLines || '').split(/[\r\n]/).filter(text => settings.ignoreEmpty === false || text.replace(/^\s*$/g, '').length),
     fontSize: isNaN(parseFloat(settings.fontSize)) ? 16 : settings.fontSize,
+    fontWeight: settings.fontWeight || 'normal',
+    fontStyle: settings.fontStyle || 'normal',
     lineHeight: isNaN(parseFloat(settings.lineHeight)) ? 1 : settings.lineHeight,
     rotation: parseFloat(settings.rotation) || 0,
     color: settings.color || undefined,
@@ -100,6 +102,8 @@ export default React.forwardRef(({ settings, viewportRef }, canvasRef) => {
           style={{
             fill: config.color || `hsl(${i * config.centralAngle || 0}deg,100%,50%)`,
             fontSize: `${config.fontSize}px`,
+            fontWeight: config.fontWeight,
+            fontStyle: config.fontStyle,
             lineHeight: config.lineHeight,
             transform: `rotate(${i * config.centralAngle + config.rotation}deg) translate(${config.centricCircleRadius}px,0)`
           }}

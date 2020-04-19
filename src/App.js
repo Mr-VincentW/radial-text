@@ -27,7 +27,9 @@ function getPaint(canvas, options) {
 export default function App() {
   const canvasRef = useRef(null),
     viewportRef = useRef(null),
-    [settings, setSettings] = useState({}),
+    [settings, setSettings] = useState({
+      rotation: -90
+    }),
     [textLinesCount, setTextLinesCount] = useState(0),
     [estimatedImgDimentions, setEstimatedImgDimentions] = useState('0 × 0');
 
@@ -149,6 +151,26 @@ export default function App() {
               <span>px</span>
             </label>
           </dd>
+          <dt>Font Weight:</dt>
+          <dd>
+            <label>
+              <select name="fontWeight" placeholder="normal" defaultValue="normal">
+                <option value="lighter">LIGHTER</option>
+                <option value="normal">NORMAL</option>
+                <option value="bold">BOLD</option>
+                <option value="bolder">BOLDER</option>
+              </select>
+            </label>
+          </dd>
+          <dt>Font Style:</dt>
+          <dd>
+            <label>
+              <select name="fontStyle" placeholder="normal" defaultValue="normal">
+                <option value="normal">NORMAL</option>
+                <option value="italic">ITALIC</option>
+              </select>
+            </label>
+          </dd>
           <dt>Line Height:</dt>
           <dd>
             <label>
@@ -166,7 +188,7 @@ export default function App() {
           <dt>Rotation Offset:</dt>
           <dd>
             <label>
-              <input name="rotation" placeholder={0} type="number" defaultValue={0} onChange={rotationOnChange} />
+              <input name="rotation" placeholder={-90} type="number" defaultValue={-90} onChange={rotationOnChange} />
               <span>deg</span>
             </label>
           </dd>
