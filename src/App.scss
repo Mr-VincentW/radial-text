@@ -44,7 +44,8 @@ body {
         display: none;
       }
 
-      dt, dd {
+      dt,
+      dd {
         &.through {
           grid-column: 1 / span 2;
           display: initial;
@@ -66,21 +67,24 @@ body {
             width: 100%;
             height: 1px;
             top: 50%;
-            background: linear-gradient(90deg,
+            background: linear-gradient(
+              90deg,
               transparent,
-              #A9A9A9 15%,
-              #A9A9A9 calc(50% - 3em),
+              #a9a9a9 15%,
+              #a9a9a9 calc(50% - 3em),
               transparent calc(50% - 3em),
               transparent calc(50% + 3em),
-              #A9A9A9 calc(50% + 3em),
-              #A9A9A9 85%,
-              transparent);
+              #a9a9a9 calc(50% + 3em),
+              #a9a9a9 85%,
+              transparent
+            );
           }
         }
 
         &.disabled {
-          &, &+dd {
-            color: #E3DDD8;
+          &,
+          & + dd {
+            color: #e3ddd8;
             opacity: 0.75;
           }
         }
@@ -106,7 +110,7 @@ body {
           color: #999;
         }
 
-        >* {
+        > * {
           flex: 1;
         }
 
@@ -124,7 +128,7 @@ body {
         input {
           margin-right: 0.5em;
 
-          &[type="number"] {
+          &[type='number'] {
             width: 4em;
           }
         }
@@ -167,15 +171,27 @@ body {
   .viewport {
     position: relative;
     flex: 3;
-    border: solid 1px #A9A9A9;
+    border: solid 1px #a9a9a9;
     height: -webkit-fill-available;
     margin: 20px;
     cursor: zoom-in;
     user-select: none;
     overflow: auto;
-    background: linear-gradient(-45deg, #EEE 25%, transparent 25%, transparent 75%, #EEE 75%),
-      linear-gradient(-45deg, #EEE 25%, transparent 25%, transparent 75%, #EEE 75%),
-      #FFF;
+    background: linear-gradient(
+        -45deg,
+        #eee 25%,
+        transparent 25%,
+        transparent 75%,
+        #eee 75%
+      ),
+      linear-gradient(
+        -45deg,
+        #eee 25%,
+        transparent 25%,
+        transparent 75%,
+        #eee 75%
+      ),
+      #fff;
     background-size: 20px 20px;
     background-position: 0 0, 10px 10px;
 

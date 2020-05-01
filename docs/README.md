@@ -9,7 +9,7 @@ And the output:
 
 ![Raial Text Output](resources/RadialTextOutput.png)
 
-You may have a try here: [Radial Text Generator](https://radial-text.photoshow.cool/)
+You may have a try here: [Radial Text Generator](https://miscellany.vincent-is.me/radial-text-generator/)
 
 ## About The Project
 This is a personal practice for React learning and all comments are welcomed.
