@@ -1,5 +1,5 @@
 # Radial Text Generator
-This is a simple tool for generating radial text rings. You have several options for style adjusting such as font color, font size, background color, etc. It offers a real-time preview of the output and you also can export the text ring to image files later.
+This is a simple tool for generating radial text rings. You have several options for styling such as font color, font size, background color, etc. It offers a real-time preview of the output and you can also export the text ring to image files later.
 
 The UI:
 
